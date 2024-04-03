@@ -32,5 +32,16 @@ namespace SistemaFactura
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

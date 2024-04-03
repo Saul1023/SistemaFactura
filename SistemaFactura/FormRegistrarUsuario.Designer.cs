@@ -33,11 +33,11 @@
             textBox1 = new TextBox();
             button1 = new Button();
             label3 = new Label();
-            button2 = new Button();
             label4 = new Label();
             label5 = new Label();
             panel1 = new Panel();
             tbNit = new NumericUpDown();
+            btAtras = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbNit).BeginInit();
             SuspendLayout();
@@ -52,6 +52,7 @@
             label2.Size = new Size(351, 15);
             label2.TabIndex = 10;
             label2.Text = "Es la primera vez que ingresas a este sistema, por favor ingresa tu:";
+            label2.Click += label2_Click;
             // 
             // label1
             // 
@@ -96,20 +97,6 @@
             label3.TabIndex = 16;
             label3.Text = "¿No es la primera vez?";
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(0, 17, 61);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 11F);
-            button2.ForeColor = SystemColors.ControlLightLight;
-            button2.Location = new Point(123, 303);
-            button2.Name = "button2";
-            button2.Size = new Size(143, 33);
-            button2.TabIndex = 17;
-            button2.Text = "Volver atras";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -149,15 +136,30 @@
             tbNit.TabIndex = 22;
             tbNit.ValueChanged += tbNit_ValueChanged;
             // 
+            // btAtras
+            // 
+            btAtras.BackColor = Color.FromArgb(0, 17, 61);
+            btAtras.FlatAppearance.BorderSize = 0;
+            btAtras.FlatStyle = FlatStyle.Flat;
+            btAtras.Font = new Font("Segoe UI", 11F);
+            btAtras.ForeColor = SystemColors.ControlLightLight;
+            btAtras.Location = new Point(123, 289);
+            btAtras.Name = "btAtras";
+            btAtras.Size = new Size(143, 33);
+            btAtras.TabIndex = 23;
+            btAtras.Text = "Volver atras";
+            btAtras.UseVisualStyleBackColor = false;
+            btAtras.Click += btAtras_Click;
+            // 
             // FormRegistrarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(364, 364);
+            Controls.Add(btAtras);
             Controls.Add(tbNit);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(button2);
             Controls.Add(label3);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -179,10 +181,10 @@
         private TextBox textBox1;
         private Button button1;
         private Label label3;
-        private Button button2;
         private Label label4;
         private Label label5;
         private Panel panel1;
         private NumericUpDown tbNit;
+        private Button btAtras;
     }
 }
