@@ -91,6 +91,7 @@
             tbNitCi.Name = "tbNitCi";
             tbNitCi.Size = new Size(143, 23);
             tbNitCi.TabIndex = 1;
+            tbNitCi.TextChanged += tbNitCi_TextChanged;
             // 
             // tbCodigoAuto
             // 
@@ -294,6 +295,7 @@
             Controls.Add(panel1);
             Name = "FormGenerarFactura";
             Text = "Generar Factura";
+            Load += FormGenerarFactura_Load;
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

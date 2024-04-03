@@ -16,5 +16,15 @@ namespace SistemaFactura
         {
             InitializeComponent();
         }
+
+        private void tbNitCi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormGenerarFactura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
