@@ -31,11 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGenerarFactura));
             fileSystemWatcher1 = new FileSystemWatcher();
             panel1 = new Panel();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            label9 = new Label();
+            tbNitCi = new TextBox();
+            tbCodigoAuto = new TextBox();
+            dtpFecha = new DateTimePicker();
+            tbMonto = new TextBox();
+            tbMontoImponible = new TextBox();
             textBox5 = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -49,7 +50,6 @@
             label7 = new Label();
             label8 = new Label();
             panel2 = new Panel();
-            label9 = new Label();
             pictureBox1 = new PictureBox();
             label10 = new Label();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
@@ -73,40 +73,52 @@
             panel1.Size = new Size(534, 54);
             panel1.TabIndex = 0;
             // 
-            // textBox1
+            // label9
             // 
-            textBox1.Location = new Point(249, 102);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(143, 23);
-            textBox1.TabIndex = 1;
+            label9.AutoSize = true;
+            label9.BackColor = Color.Orange;
+            label9.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = SystemColors.ControlLightLight;
+            label9.Location = new Point(12, 9);
+            label9.Name = "label9";
+            label9.Size = new Size(82, 25);
+            label9.TabIndex = 20;
+            label9.Text = "Factura:";
             // 
-            // textBox2
+            // tbNitCi
             // 
-            textBox2.Location = new Point(249, 141);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(143, 23);
-            textBox2.TabIndex = 2;
+            tbNitCi.Location = new Point(249, 102);
+            tbNitCi.Name = "tbNitCi";
+            tbNitCi.Size = new Size(143, 23);
+            tbNitCi.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // tbCodigoAuto
             // 
-            dateTimePicker1.Location = new Point(175, 186);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(217, 23);
-            dateTimePicker1.TabIndex = 3;
+            tbCodigoAuto.Location = new Point(249, 141);
+            tbCodigoAuto.Name = "tbCodigoAuto";
+            tbCodigoAuto.Size = new Size(143, 23);
+            tbCodigoAuto.TabIndex = 2;
             // 
-            // textBox3
+            // dtpFecha
             // 
-            textBox3.Location = new Point(249, 226);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(143, 23);
-            textBox3.TabIndex = 4;
+            dtpFecha.Location = new Point(175, 186);
+            dtpFecha.Name = "dtpFecha";
+            dtpFecha.Size = new Size(217, 23);
+            dtpFecha.TabIndex = 3;
             // 
-            // textBox4
+            // tbMonto
             // 
-            textBox4.Location = new Point(249, 268);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(143, 23);
-            textBox4.TabIndex = 5;
+            tbMonto.Location = new Point(249, 226);
+            tbMonto.Name = "tbMonto";
+            tbMonto.Size = new Size(143, 23);
+            tbMonto.TabIndex = 4;
+            // 
+            // tbMontoImponible
+            // 
+            tbMontoImponible.Location = new Point(249, 268);
+            tbMontoImponible.Name = "tbMontoImponible";
+            tbMontoImponible.Size = new Size(143, 23);
+            tbMontoImponible.TabIndex = 5;
             // 
             // textBox5
             // 
@@ -238,18 +250,6 @@
             panel2.Size = new Size(534, 34);
             panel2.TabIndex = 19;
             // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Orange;
-            label9.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.ForeColor = SystemColors.ControlLightLight;
-            label9.Location = new Point(12, 9);
-            label9.Name = "label9";
-            label9.Size = new Size(82, 25);
-            label9.TabIndex = 20;
-            label9.Text = "Factura:";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -286,11 +286,11 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbMontoImponible);
+            Controls.Add(tbMonto);
+            Controls.Add(dtpFecha);
+            Controls.Add(tbCodigoAuto);
+            Controls.Add(tbNitCi);
             Controls.Add(panel1);
             Name = "FormGenerarFactura";
             Text = "Generar Factura";
@@ -307,14 +307,14 @@
         #endregion
 
         private FileSystemWatcher fileSystemWatcher1;
-        private TextBox textBox1;
+        private TextBox tbNitCi;
         private Panel panel1;
         private Label label1;
         private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
+        private TextBox tbMontoImponible;
+        private TextBox tbMonto;
+        private DateTimePicker dtpFecha;
+        private TextBox tbCodigoAuto;
         private Panel panel2;
         private TextBox textBox7;
         private Label label8;
