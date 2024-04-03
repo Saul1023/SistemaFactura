@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace SistemaFactura.Conexion
 {
@@ -13,18 +8,18 @@ namespace SistemaFactura.Conexion
         public SqlConnection con { get; set; }
         public Conexion()
         {
-            cadenaConexion = @"Data Source=localhost;Initial Catalog=agenda;User ID=sa;Password=sa123";
+            cadenaConexion = @"Data Source=localhost;Initial Catalog=sistema_factura;User ID=factura_admin;Password=admin123";
+            con = new SqlConnection(cadenaConexion);
         }
         public void conectarBD()
         {
             try
             {
-                con = new SqlConnection(cadenaConexion);
                 con.Open();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar la BD: " + ex.Message);
+                MessageBox.Show("Error al conectar a la BD: " + ex.Message);
             }
         }
         public void cerrarBD()
