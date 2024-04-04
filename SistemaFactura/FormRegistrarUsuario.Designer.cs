@@ -30,14 +30,14 @@
         {
             label2 = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
+            tetNombre = new TextBox();
             button1 = new Button();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             panel1 = new Panel();
-            tbNit = new NumericUpDown();
             btAtras = new Button();
+            tbNit = new NumericUpDown();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbNit).BeginInit();
             SuspendLayout();
@@ -64,14 +64,14 @@
             label1.TabIndex = 11;
             label1.Text = "Nombre / Razón Social";
             // 
-            // textBox1
+            // tetNombre
             // 
-            textBox1.Location = new Point(72, 84);
-            textBox1.MaxLength = 50;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(221, 23);
-            textBox1.TabIndex = 12;
-            textBox1.TextChanged += textBox1_TextChanged;
+            tetNombre.Location = new Point(72, 84);
+            tetNombre.MaxLength = 50;
+            tetNombre.Name = "tetNombre";
+            tetNombre.Size = new Size(221, 23);
+            tetNombre.TabIndex = 12;
+            tetNombre.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
@@ -86,6 +86,7 @@
             button1.TabIndex = 15;
             button1.Text = "Registrarse";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label3
             // 
@@ -127,15 +128,6 @@
             panel1.Size = new Size(364, 39);
             panel1.TabIndex = 21;
             // 
-            // tbNit
-            // 
-            tbNit.Location = new Point(72, 143);
-            tbNit.Maximum = new decimal(new int[] { -727379969, 232, 0, 0 });
-            tbNit.Name = "tbNit";
-            tbNit.Size = new Size(221, 23);
-            tbNit.TabIndex = 22;
-            tbNit.ValueChanged += tbNit_ValueChanged;
-            // 
             // btAtras
             // 
             btAtras.BackColor = Color.FromArgb(0, 17, 61);
@@ -151,6 +143,15 @@
             btAtras.UseVisualStyleBackColor = false;
             btAtras.Click += btAtras_Click;
             // 
+            // tbNit
+            // 
+            tbNit.Location = new Point(72, 143);
+            tbNit.Maximum = new decimal(new int[] { -727379969, 232, 0, 0 });
+            tbNit.Name = "tbNit";
+            tbNit.Size = new Size(221, 23);
+            tbNit.TabIndex = 22;
+            tbNit.ValueChanged += tbNit_ValueChanged;
+            // 
             // FormRegistrarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -162,7 +163,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(button1);
-            Controls.Add(textBox1);
+            Controls.Add(tetNombre);
             Controls.Add(label1);
             Controls.Add(panel1);
             Name = "FormRegistrarUsuario";
@@ -178,13 +179,13 @@
 
         private Label label2;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox tetNombre;
         private Button button1;
         private Label label3;
         private Label label4;
         private Label label5;
         private Panel panel1;
-        private NumericUpDown tbNit;
         private Button btAtras;
+        private NumericUpDown tbNit;
     }
 }
