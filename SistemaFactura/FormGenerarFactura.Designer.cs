@@ -32,12 +32,12 @@
             fileSystemWatcher1 = new FileSystemWatcher();
             panel1 = new Panel();
             label9 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            tbNit = new TextBox();
+            tbNombreRazon = new TextBox();
+            Fecha = new DateTimePicker();
+            tbMonto = new TextBox();
+            tbMontoImponible = new TextBox();
+            tbCodigoControl = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -53,7 +53,13 @@
             pictureBox1 = new PictureBox();
             label10 = new Label();
             label11 = new Label();
-            comboBox1 = new ComboBox();
+            TipoFactura = new ComboBox();
+            tbNitEmisor = new TextBox();
+            label12 = new Label();
+            tbNumeroFactura = new TextBox();
+            label13 = new Label();
+            tbCodigoAutorizacion = new TextBox();
+            label14 = new Label();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -87,47 +93,47 @@
             label9.TabIndex = 20;
             label9.Text = "Factura:";
             // 
-            // textBox1
+            // tbNit
             // 
-            textBox1.Location = new Point(249, 102);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(143, 23);
-            textBox1.TabIndex = 1;
+            tbNit.Location = new Point(249, 102);
+            tbNit.Name = "tbNit";
+            tbNit.Size = new Size(143, 23);
+            tbNit.TabIndex = 0;
             // 
-            // textBox2
+            // tbNombreRazon
             // 
-            textBox2.Location = new Point(249, 141);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(143, 23);
-            textBox2.TabIndex = 2;
+            tbNombreRazon.Location = new Point(249, 141);
+            tbNombreRazon.Name = "tbNombreRazon";
+            tbNombreRazon.Size = new Size(143, 23);
+            tbNombreRazon.TabIndex = 1;
             // 
-            // dateTimePicker1
+            // Fecha
             // 
-            dateTimePicker1.Location = new Point(176, 210);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(217, 23);
-            dateTimePicker1.TabIndex = 3;
+            Fecha.Location = new Point(175, 295);
+            Fecha.Name = "Fecha";
+            Fecha.Size = new Size(217, 23);
+            Fecha.TabIndex = 3;
             // 
-            // textBox3
+            // tbMonto
             // 
-            textBox3.Location = new Point(250, 255);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(143, 23);
-            textBox3.TabIndex = 4;
+            tbMonto.Location = new Point(247, 328);
+            tbMonto.Name = "tbMonto";
+            tbMonto.Size = new Size(143, 23);
+            tbMonto.TabIndex = 4;
             // 
-            // textBox4
+            // tbMontoImponible
             // 
-            textBox4.Location = new Point(250, 297);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(143, 23);
-            textBox4.TabIndex = 5;
+            tbMontoImponible.Location = new Point(247, 365);
+            tbMontoImponible.Name = "tbMontoImponible";
+            tbMontoImponible.Size = new Size(143, 23);
+            tbMontoImponible.TabIndex = 5;
             // 
-            // textBox5
+            // tbCodigoControl
             // 
-            textBox5.Location = new Point(250, 338);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(143, 23);
-            textBox5.TabIndex = 6;
+            tbCodigoControl.Location = new Point(247, 403);
+            tbCodigoControl.Name = "tbCodigoControl";
+            tbCodigoControl.Size = new Size(143, 23);
+            tbCodigoControl.TabIndex = 6;
             // 
             // label1
             // 
@@ -145,15 +151,15 @@
             label2.Font = new Font("Segoe UI", 12F);
             label2.Location = new Point(81, 143);
             label2.Name = "label2";
-            label2.Size = new Size(154, 21);
+            label2.Size = new Size(114, 21);
             label2.TabIndex = 9;
-            label2.Text = "Codigo Autorización:";
+            label2.Text = "Nombre razon:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(82, 217);
+            label3.Location = new Point(81, 296);
             label3.Name = "label3";
             label3.Size = new Size(53, 21);
             label3.TabIndex = 10;
@@ -163,7 +169,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(86, 257);
+            label4.Location = new Point(83, 330);
             label4.Name = "label4";
             label4.Size = new Size(59, 21);
             label4.TabIndex = 11;
@@ -173,7 +179,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
-            label5.Location = new Point(86, 299);
+            label5.Location = new Point(83, 367);
             label5.Name = "label5";
             label5.Size = new Size(133, 21);
             label5.TabIndex = 12;
@@ -183,11 +189,11 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F);
-            label6.Location = new Point(86, 340);
+            label6.Location = new Point(83, 405);
             label6.Name = "label6";
-            label6.Size = new Size(154, 21);
+            label6.Size = new Size(116, 21);
             label6.TabIndex = 13;
-            label6.Text = "Código Autorización:";
+            label6.Text = "Código control:";
             // 
             // button1
             // 
@@ -196,12 +202,13 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 11F);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(339, 397);
+            button1.Location = new Point(379, 523);
             button1.Name = "button1";
             button1.Size = new Size(143, 33);
             button1.TabIndex = 14;
             button1.Text = "Registrar Factura";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox6
             // 
@@ -247,7 +254,7 @@
             panel2.Controls.Add(textBox6);
             panel2.Controls.Add(label7);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 477);
+            panel2.Location = new Point(0, 578);
             panel2.Name = "panel2";
             panel2.Size = new Size(534, 34);
             panel2.TabIndex = 19;
@@ -255,7 +262,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(16, 384);
+            pictureBox1.Location = new Point(4, 498);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(128, 74);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -275,26 +282,78 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(86, 181);
+            label11.Location = new Point(86, 446);
             label11.Name = "label11";
             label11.Size = new Size(46, 15);
             label11.TabIndex = 22;
             label11.Text = "Factura";
             // 
-            // comboBox1
+            // TipoFactura
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(249, 178);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(144, 23);
-            comboBox1.TabIndex = 23;
+            TipoFactura.DropDownStyle = ComboBoxStyle.DropDownList;
+            TipoFactura.FormattingEnabled = true;
+            TipoFactura.Location = new Point(249, 443);
+            TipoFactura.Name = "TipoFactura";
+            TipoFactura.Size = new Size(144, 23);
+            TipoFactura.TabIndex = 2;
+            // 
+            // tbNitEmisor
+            // 
+            tbNitEmisor.Location = new Point(248, 179);
+            tbNitEmisor.Name = "tbNitEmisor";
+            tbNitEmisor.Size = new Size(143, 23);
+            tbNitEmisor.TabIndex = 1;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F);
+            label12.Location = new Point(80, 181);
+            label12.Name = "label12";
+            label12.Size = new Size(86, 21);
+            label12.TabIndex = 9;
+            label12.Text = "Nit emisor:";
+            // 
+            // tbNumeroFactura
+            // 
+            tbNumeroFactura.Location = new Point(248, 218);
+            tbNumeroFactura.Name = "tbNumeroFactura";
+            tbNumeroFactura.Size = new Size(143, 23);
+            tbNumeroFactura.TabIndex = 1;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F);
+            label13.Location = new Point(80, 220);
+            label13.Name = "label13";
+            label13.Size = new Size(123, 21);
+            label13.TabIndex = 9;
+            label13.Text = "Numero factura:";
+            // 
+            // tbCodigoAutorizacion
+            // 
+            tbCodigoAutorizacion.Location = new Point(248, 256);
+            tbCodigoAutorizacion.Name = "tbCodigoAutorizacion";
+            tbCodigoAutorizacion.Size = new Size(143, 23);
+            tbCodigoAutorizacion.TabIndex = 1;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Segoe UI", 12F);
+            label14.Location = new Point(80, 258);
+            label14.Name = "label14";
+            label14.Size = new Size(152, 21);
+            label14.TabIndex = 9;
+            label14.Text = "Codigo autorizacion:";
             // 
             // FormGenerarFactura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(534, 511);
-            Controls.Add(comboBox1);
+            ClientSize = new Size(534, 612);
+            Controls.Add(TipoFactura);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(pictureBox1);
@@ -304,14 +363,20 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
+            Controls.Add(label14);
+            Controls.Add(label13);
+            Controls.Add(label12);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tbCodigoControl);
+            Controls.Add(tbMontoImponible);
+            Controls.Add(tbMonto);
+            Controls.Add(Fecha);
+            Controls.Add(tbCodigoAutorizacion);
+            Controls.Add(tbNumeroFactura);
+            Controls.Add(tbNitEmisor);
+            Controls.Add(tbNombreRazon);
+            Controls.Add(tbNit);
             Controls.Add(panel1);
             Name = "FormGenerarFactura";
             Text = "Generar Factura";
@@ -328,14 +393,14 @@
         #endregion
 
         private FileSystemWatcher fileSystemWatcher1;
-        private TextBox textBox1;
+        private TextBox tbNit;
         private Panel panel1;
         private Label label1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
+        private TextBox tbCodigoControl;
+        private TextBox tbMontoImponible;
+        private TextBox tbMonto;
+        private DateTimePicker Fecha;
+        private TextBox tbNombreRazon;
         private Panel panel2;
         private TextBox textBox7;
         private Label label8;
@@ -351,6 +416,12 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private ComboBox comboBox1;
+        private ComboBox TipoFactura;
+        private Label label14;
+        private Label label13;
+        private Label label12;
+        private TextBox tbCodigoAutorizacion;
+        private TextBox tbNumeroFactura;
+        private TextBox tbNitEmisor;
     }
 }
